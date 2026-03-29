@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб 2 — Литвинов Давид</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #161b22;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(88, 166, 255, 0.25);
+        }
+        h1 {
+            text-align: center;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #39c3ff;
+            border-bottom: 2px solid #58a6ff;
+            padding-bottom: 8px;
+            margin-top: 35px;
+        }
+        .task {
+            background: #21262d;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            border-left: 5px solid #58a6ff;
+        }
+        img {
+            max-width: 100%;
+            border: 2px solid #30363d;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.95em;
+        }
+        a { color: #58a6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Веб-2</h1>
+        <h2>Литвинов Давид</h2>
+        
+       <p><strong>Домен:</strong> <a href="http://u82352.kubsu-dev.ru/web-2/" target="_blank">http://u82352.kubsu-dev.ru/web-2/</a><br>
+   <strong>GitHub:</strong> <a href="https://github.com/PrijmaZak/web-2" target="_blank">https://github.com/PrijmaZak/web-2</a></p>
+
+        <h2>Выполненные HTTP-запросы через терминал (telnet)</h2>
+         <div class="task">
+            <h3>0.Развертывание ресурсов</h3>
+            <p>Необходимые для работы файлы (index.php, архив, изображения) загружены на сервер через GitHub.
+                 Проект развернут в каталоге /www/web_task2. Факт успешного размещения подтвержден — файлы доступны по ссылкам учебного домена и корректно отображаются в браузере.</p>
+            <img src="01.jpg" alt="Задание 0">
+            <img src="02.jpg" alt="Задание 0">
+        </div>
+        <div class="task">
+            <h3>1. Получение главной страницы (HTTP/1.0)</h3>
+            <p>Отправлен классический GET-запрос по протоколу HTTP 1.0 на корневой путь.</p>
+            <img src="1.png" alt="Задание 1">
+        </div>
+
+        <div class="task">
+            <h3>2. Получение страницы index.php (HTTP/1.1)</h3>
+            <p>Выполнен GET-запрос по протоколу HTTP 1.1 с указанием хоста.</p>
+            <img src="2.png" alt="Задание 2">
+        </div>
+
+        <div class="task">
+            <h3>3. Определение размера файла file.tar.gz</h3>
+            <p>Использован метод HEAD для получения заголовка Content-Length без скачивания файла.</p>
+            <img src="3.png" alt="Задание 3">
+        </div>
+
+        <div class="task">
+            <h3>4. Определение медиатипа файла image.png</h3>
+            <p>Через метод HEAD получен заголовок Content-Type, показывающий тип содержимого.</p>
+            <img src="4.png" alt="Задание 4">
+        </div>
+
+        <div class="task">
+            <h3>5. Отправка комментария (POST-запрос)</h3>
+            <p>Отправлен POST-запрос с параметром comment. Сервер обработал данные и вернул ответ.</p>
+            <img src="5.png" alt="Задание 5">
+        </div>
+
+        <div class="task">
+            <h3>6. Получение первых 100 байт файла file.tar.gz</h3>
+            <p>Использован заголовок Range: bytes=0-99 для частичной загрузки файла.</p>
+            <img src="6.png" alt="Задание 6">
+        </div>
+
+        <div class="task">
+            <h3>7. Определение кодировки страницы index.php</h3>
+            <p>Через метод HEAD получена информация о charset в заголовке Content-Type.</p>
+            <img src="7.png" alt="Задание 7">
+        </div>
+
+        <div class="footer">
+            <p>Все запросы выполнены через терминал с помощью telnet.<br>
+            Файлы загружены через Git. Работа выполнена и сдана.</p>
+        </div>
+    </div>
+</body>
+</html>
